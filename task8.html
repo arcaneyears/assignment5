@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task 8. Interactive To-Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Assignment #5</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="task0.html">Task 0</a></li>
+                <li class="nav-item"><a class="nav-link" href="task1.html">Task 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="task2.html">Task 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="task3.html">Task 3</a></li>
+                <li class="nav-item"><a class="nav-link" href="task4.html">Task 4</a></li>
+                <li class="nav-item"><a class="nav-link" href="task5.html">Task 5</a></li>
+                <li class="nav-item"><a class="nav-link" href="task6.html">Task 6</a></li>
+                <li class="nav-item"><a class="nav-link" href="task7.html">Task 7</a></li>
+                <li class="nav-item"><a class="nav-link active" href="task8.html">Task 8</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="page-header">
+    <div class="container">
+        <h1>Task 8. Interactive To-Do List</h1>
+        <p>Part 4. Mini Project</p>
+    </div>
+</header>
+
+<main class="container">
+    <div class="panel">
+        <form id="todoForm" class="row g-2">
+            <div class="col-sm-9">
+                <label for="todoInput" class="visually-hidden">New task</label>
+                <input type="text" class="form-control" id="todoInput" placeholder="What has to be done?" autocomplete="off">
+            </div>
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-primary w-100">Add Task</button>
+            </div>
+        </form>
+
+        <p class="text-danger mt-2 mb-0 d-none" id="todoError">Please write the task first.</p>
+
+        <ul class="list-group mt-3" id="todoList"></ul>
+
+        <p class="text-muted mt-3 mb-0" id="todoCounter">No tasks yet.</p>
+    </div>
+
+    <div class="panel">
+        <h2 class="h5">How it works</h2>
+        <ul class="mb-0">
+            <li>Every task is an object with a <code>text</code> and a <code>done</code> field, stored in the array <code>tasks</code>.</li>
+            <li>After each change the list is drawn again from that array.</li>
+            <li>A click on the text switches the <code>done</code> field and the item gets a strike-through style.</li>
+            <li>The <strong>Delete</strong> button removes the task from the array with <code>splice()</code>.</li>
+            <li>Nothing is saved after a reload, the data lives only in the array.</li>
+        </ul>
+    </div>
+</main>
+
+<footer class="container border-top">
+    <p class="mb-0">Web Technologies &mdash; Front-End Development. Assignment #5.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/task8.js"></script>
+</body>
+</html>

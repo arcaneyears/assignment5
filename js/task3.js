@@ -17,8 +17,8 @@ box.style.fontSize = fontSize + "px";
 showInfo();
 
 document.getElementById("colorButton").addEventListener("click", function () {
-    box.style.backgroundColor = colors[colorIndex];
-    colorIndex = (colorIndex + 1) % colors.length;
+    index = random(1 , 5)
+    box.style.backgroundColor = colors[index];
     showInfo();
 });
 
